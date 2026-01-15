@@ -2,7 +2,7 @@ import { Calculator } from './calculator';
 import { greet } from './utils';
 
 function main(): void {
-  console.log(greet('World'));
+  console.log(greet('Hello'));
 
   const calc = new Calculator();
 
