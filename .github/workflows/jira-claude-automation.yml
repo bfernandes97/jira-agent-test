@@ -71,7 +71,8 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          allowed_tools: "Read,Write,Edit,Glob,Grep,Bash"
+          claude_args: |
+            --allowedTools "Edit,Write,Read,Glob,Grep,Bash(npm run build),Bash(npm install)"
           prompt: |
             Jira Ticket: ${{ github.event.client_payload.issue_key }}
 
